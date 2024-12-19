@@ -1,0 +1,152 @@
+/* src/index.css */
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Light background color */
+  color: #495057; /* Dark text color for contrast */
+}
+
+/* Reset default margin and padding for common elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container styling for better spacing */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Flexbox utility classes for centering elements */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for loading or transitioning elements */
+.fade-in {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Card styling for a more polished look */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e3e4e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Utility classes for padding and margins */
+.p-4 {
+  padding: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1.5rem;
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background-color: #343a40;
+  color: white;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+/* Full-screen hero section (Optional) */
+.hero {
+  height: 100vh;
+  background: url('/path-to-your-image.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Smooth button hover effect */
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Adjusting font sizes for responsiveness */
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.875rem;
+  }
+}
