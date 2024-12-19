@@ -20,7 +20,7 @@ const projectData = [
     title: "Portfolio Website ",
     description: "Developed a personal portfolio webpage with HTML and CSS, featuring responsive design and animations for enhanced user engagement.",
     techStack: "React, CSS, Motion",
-    link: "https://github.com/Rijul-chadha?tab=repositories",
+    link: "https://github.com/Rijul-chadha/my_portfolio_website",
   },
   {
     title: "Payroll Management DBMS",
