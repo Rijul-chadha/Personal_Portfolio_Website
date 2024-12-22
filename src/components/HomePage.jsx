@@ -29,6 +29,7 @@ const HomePage = () => {
         <div className="social-media">
         
           <div className="social-icons">
+          <br></br>
             <a href="https://www.linkedin.com/in/rijul-chadha-788801255/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon" />
             </a>
@@ -46,13 +47,15 @@ const HomePage = () => {
 
         {/* Download Resume Section */}
         <div className="download-resume">
+        <br></br>
           <a href={resumeFile} download="Rijul_Chadha_Resume.pdf" className="resume-button">
             Download Resume
           </a>
-          <br>
         </div>
       </div>
+     <br></br><br></br><br></br><br></br><br></br> <br></br>
     </section>
+    
   );
 };
 
