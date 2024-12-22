@@ -50,7 +50,7 @@ const HomePage = () => {
             Download Resume
           </a>
         </div>
-      </div>
+      </div><br></br><br></br><br></br><br></br><br></br><br></br>
     </section>
   );
 };
