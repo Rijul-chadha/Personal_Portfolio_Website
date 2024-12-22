@@ -1,121 +1,216 @@
-/* src/components/HomePage.css */
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .homepage-container {
-    background-color: #f0f4f8;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-  }
-  
-  .intro-text {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 40px;
-  }
-  
-  .about-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-  
-  .profile-picture {
-    flex: 0 0 200px;
-  }
-  
-  .profile-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid #95a5a6;
-  }
-  
-  .bio {
-    flex: 1;
-    max-width: 600px;
-  }
-  
-  .bio p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #34495e;
-  }
-  
-  .social-media {
-    margin-top: 40px;
-  }
-  
-  .social-media h2 {
-    font-size: 2rem;
-    color: #34495e;
-    margin-bottom: 20px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .social-icon {
-    font-size: 2.5rem;
-    color: #7f8c8d;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .social-icon:hover {
-    color: #34495e;
-  }
-  
-  @media (max-width: 768px) {
-    .social-icons {
-      gap: 15px;
-    }
-  
-    .social-icon {
-      font-size: 2rem;
-    }
-  }
+  flex: 1; /* Makes the container take the remaining height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light grey background */
+  color: #2c3e50; /* Dark text for readability */
+  animation: fadeIn 1.2s ease-out; /* Page fade-in animation */
+}
 
-  /* Resume Button */
+.content {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-out; /* Smooth slide-up */
+}
+
+/* Intro Text with Fade-In Animation */
+.intro-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards 0.2s; /* Fade-in with slight delay */
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards 0.3s; /* Slide-up with delay */
+}
+
+.profile-picture {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease-in-out; /* Smoother transformation */
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.bio {
+  flex: 2;
+  margin-left: 20px;
+  text-align: left;
+  animation: fadeInRight 1.5s ease-out forwards 0.5s; /* Fade-in with a slight delay */
+}
+
+.bio p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Social Media Section */
+.social-media {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards 0.6s; /* Slide-up with delay */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #34495e;
+  transition: color 0.25s ease, transform 0.25s ease; /* Smoother hover transition */
+}
+
+.social-icon:hover {
+  color: #3498db;
+  transform: scale(1.15); /* Slight scale effect */
+}
+
+/* Download Resume Section */
 .download-resume {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards 0.7s; /* Slide-up with delay */
 }
 
 .resume-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #34495e; /* Darker button color */
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #34495e; /* Theme color */
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smoothed transition */
 }
 
 .resume-button:hover {
-    background-color: #2c3e50; /* Slightly darker on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background-color: #2c3e50; /* Slightly darker theme color */
+  transform: scale(1.05); /* Slight scale effect */
 }
 
-  
+/* Footer Section */
+.footer {
+  background-color: #34495e; /* Theme background */
+  color: #ffffff; /* White text */
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards 0.8s; /* Fade-in from bottom */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+  }
+
+  .profile-picture {
+    margin-bottom: 15px;
+  }
+
+  .bio {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .bio p {
+    font-size: 0.95rem;
+  }
+
+  .intro-text {
+    font-size: 1.2rem;
+  }
+
+  .resume-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
