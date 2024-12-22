@@ -1,113 +1,167 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .skills-page {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Light background matching HomePage */
-    padding: 50px 20px;
-    min-height: 100vh;
-    text-align: center;
-  }
-  
-  .page-title {
-    font-size: 3rem;
-    color: #2c3e50; /* Dark gray color from HomePage */
-    margin-bottom: 40px;
-  }
-  
-  .skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 40px;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.skills-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; /* Light background matching HomePage */
+  padding: 50px 20px;
+  min-height: 100vh;
+  text-align: center;
+  animation: fadeIn 0.2s ease-in-out; /* Ultra-fast Fade-in animation */
+}
+
+/* Page Title Animation */
+.page-title {
+  font-size: 3rem;
+  color: #2c3e50; /* Dark gray color from HomePage */
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-in-out forwards 0.1s; /* Ultra-fast slide-up */
+}
+
+/* Container for skills */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards 0.2s; /* Even faster fade-in and slide-up */
+}
+
+/* Skills Category with Hover Animation */
+.skills-category {
+  background-color: #ffffff; /* White background for each category */
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, box-shadow 0.1s ease; /* Very fast transition */
+  height: auto;
+  flex-basis: 30%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(30px); /* Start from below */
+  opacity: 0; /* Initially invisible */
+  animation: slideIn 0.3s ease-in-out forwards; /* Ultra-fast slide-in */
+  animation-delay: 0.5s; /* Quick delay */
+}
+
+/* Pop-out Hover Effect */
+.skills-category:hover {
+  transform: translateY(-6px) scale(1.05); /* Slight pop-out effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Category Title Animation */
+.category-title {
+  font-size: 1.8rem;
+  color: #34495e; /* Matching text color from HomePage */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Skills List - Adding slight bounce effect */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style-type: none;
+  padding-left: 0;
+  justify-content: center;
+}
+
+/* Individual Skill Item with Hover and Transition */
+.skill-item {
+  background-color: #f8f9fa; /* Light gray background for skill items */
+  border: 2px solid #ddd;
+  border-radius: 25px; /* Rounded borders */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #34495e; /* Dark text color matching HomePage */
+  text-align: center;
+  transition: all 0.1s ease; /* Very fast transition */
+  cursor: pointer;
+  text-transform: capitalize;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease-in-out forwards; /* Faster fade-in and slide-up */
+  animation-delay: 0.7s; /* Slightly faster delay */
+}
+
+/* Pop-out Hover Effect for Skill Items */
+.skill-item:hover {
+  background-color: #34495e; /* Dark color for hover */
+  color: #ffffff; /* White text on hover */
+  border-color: #34495e; /* Matching border color */
+  transform: scale(1.1); /* Stronger pop-out effect */
+}
+
+.skill-item:active {
+  transform: scale(0.98);
+}
+
+/* Responsive Animations for Different Screen Sizes */
+@media (max-width: 1024px) {
   .skills-category {
-    background-color: #ffffff; /* White background for each category */
-    border-radius: 10px;
-    padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto;
-    flex-basis: 30%;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-basis: 45%;
+    animation-delay: 0.7s; /* Quick delay for medium screens */
   }
-  
-  .skills-category:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .skills-category {
+    flex-basis: 100%;
+    animation-delay: 1s; /* Faster delay for small screens */
   }
-  
+
   .category-title {
-    font-size: 1.8rem;
-    color: #34495e; /* Matching text color from HomePage */
-    margin-bottom: 20px;
-    font-weight: 600;
+    font-size: 1.6rem;
   }
-  
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    list-style-type: none;
-    padding-left: 0;
-    justify-content: center;
-  }
-  
+
   .skill-item {
-    background-color: #f8f9fa; /* Light gray background for skill items */
-    border: 2px solid #ddd;
-    border-radius: 25px; /* Rounded borders */
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #34495e; /* Dark text color matching HomePage */
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-transform: capitalize;
-    flex-shrink: 0;
+    font-size: 0.95rem;
+    padding: 8px 16px;
   }
-  
-  .skill-item:hover {
-    background-color: #34495e; /* Dark color for hover */
-    color: #ffffff; /* White text on hover */
-    border-color: #34495e; /* Matching border color */
-    transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .skill-item:active {
-    transform: scale(0.98);
+  100% {
+    opacity: 1;
   }
-  
-  @media (max-width: 1024px) {
-    .skills-category {
-      flex-basis: 45%;
-    }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  @media (max-width: 768px) {
-    .skills-category {
-      flex-basis: 100%;
-    }
-  
-    .category-title {
-      font-size: 1.6rem;
-    }
-  
-    .skill-item {
-      font-size: 0.95rem;
-      padding: 8px 16px;
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
