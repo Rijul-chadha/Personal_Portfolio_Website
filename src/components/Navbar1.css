@@ -1,89 +1,132 @@
-/* src/components/Navbar1.css */
-
-/* Make the navbar larger overall */
+/* Desktop Navbar Styles */
 .navbar-custom {
-    background: linear-gradient(135deg, #2c3e50, #1a252f); /* Dark blue gradient */
-    border-radius: 50px; /* Rounded corners for the navbar */
-    padding: 25px 60px; /* Larger padding for more space */
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for background and shadow */
-    font-size: 1.5rem; /* Even larger font size for the navbar */
-    height: 120px; /* Increase the height of the navbar */
+  background: linear-gradient(135deg, #2c3e50, #1a252f); /* Clean dark blue gradient */
+  border-radius: 50px; /* Keep rounded corners */
+  padding: 25px 60px; /* Original padding for desktop */
+  font-size: 1.5rem; /* Original desktop font size */
+  height: 120px; /* Fixed height for desktop */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar-custom:hover {
+  background: linear-gradient(135deg, #1b2631, #0e1a24); /* Slightly darker on hover */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+}
+
+/* Navbar brand styles */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icon {
+  font-size: 3rem; /* Keep original size */
+  color: #7f8c8d;
+  margin-right: 10px;
+}
+
+.navbar-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #b0bec5; /* Original light bluish-grey */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* Navbar links */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.5rem; /* Desktop size */
+  padding: 10px 25px; /* Padding for desktop */
+  text-transform: uppercase;
+  color: #95a5a6; /* Original muted bluish-grey */
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px; /* Rounded links */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(138, 43, 226, 0.8); /* Dark purple background */
+  color: #ffffff; /* White text on hover */
+  transform: scale(1.1); /* Slight scale */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Mobile Navbar Styles */
+@media (max-width: 992px) {
+  .navbar-custom {
+    background: linear-gradient(135deg, #2c3e50, #1a252f); /* Gradient for mobile */
+    border-radius: 0; /* Remove rounded corners for full width on mobile */
+    padding: 15px 30px; /* Compact padding for mobile */
+    height: auto; /* Adjust height dynamically */
   }
-  
-  .navbar-custom:hover {
-    background: linear-gradient(135deg, #1b2631, #0e1a24); /* Even darker blue gradient on hover */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+
+  .navbar-collapse {
+    background: linear-gradient(135deg, #2c3e50, #1a252f); /* Gradient for dropdown */
+    border-radius: 20px; /* Rounded dropdown corners */
+    margin-top: 15px; /* Separate from navbar */
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for dropdown */
   }
-  
-  /* Navbar brand styles */
-  .navbar-icon {
-    font-size: 3rem; /* Increase icon size */
-    color: #7f8c8d; /* Light greyish-blue color for the icon */
-    transition: transform 0.3s ease-in-out; /* Smooth rotation effect on hover */
-  }
-  
-  .navbar-icon:hover {
-    transform: rotate(360deg); /* Rotate the icon on hover */
-  }
-  
-  .navbar-name {
-    font-size: 2.5rem; /* Larger font size for the brand name */
-    font-weight: 700;
-    color: #b0bec5; /* Lighter bluish-grey color for the brand name */
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .navbar-name:hover {
-    color: #e3f2fd; /* Very light blue color on hover */
-  }
-  
-  /* Navbar link styles */
+
   .navbar-nav .nav-item .nav-link {
-    font-size: 1.8rem; /* Even larger font size for the links */
-    letter-spacing: 2px;
-    padding: 20px 40px; /* Even more padding for the links */
-    text-transform: uppercase;
-    border-radius: 30px; /* Rounded corners for each link */
-    color: #95a5a6; /* Muted bluish-grey color for the links */
-    transition: all 0.3s ease-in-out; /* Smooth transition for color and size */
+    font-size: 1.4rem; /* Slightly smaller font size for mobile */
+    padding: 12px 20px;
+    color: #ffffff; /* White text for better contrast on mobile */
   }
-  
-  /* Hover effect for links - Light pastel pink with translucency */
+
   .navbar-nav .nav-item .nav-link:hover {
-    background-color: rgba(255, 182, 193, 0.5); /* Light pastel pink with some transparency */
-    color: #ffffff; /* White text on hover */
-    transform: scale(1.1); /* Slightly increase the scale of the link */
-    text-decoration: none; /* Remove underline */
+    background-color: rgba(138, 43, 226, 0.8); /* Dark purple background */
+    color: #ffffff;
   }
-  
-  /* Navbar toggler button */
-  .navbar-toggler-icon {
-    background-color: #7f8c8d; /* Light bluish-grey for the hamburger icon */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-    width: 45px; /* Make the hamburger icon wider */
-    height: 45px; /* Make the hamburger icon taller */
+
+  .navbar-brand {
+    justify-content: center; /* Center align brand */
   }
-  
-  .navbar-toggler-icon:hover {
-    transform: rotate(90deg); /* Rotate the hamburger icon */
+
+  .navbar-name {
+    font-size: 2rem; /* Adjust font size for mobile */
   }
-  
-  /* Smooth transition for collapse */
-  .collapse {
-    transition: max-height 0.3s ease-out;
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 992px) {
-    .navbar-nav .nav-item .nav-link {
-      font-size: 1.6rem; /* Adjust font size for mobile */
-      padding: 18px 35px; /* Adjust padding for mobile */
-    }
-    .navbar-custom {
-      padding: 25px 30px; /* Adjust padding for mobile */
-      height: 100px; /* Adjust height for mobile */
-    }
-  }
-  
+}
+
+/* Navbar toggler button (fix for two white lines) */
+.navbar-toggler {
+  border: none; /* Remove border */
+  background: none; /* Ensure no background */
+  outline: none; /* Remove outline on focus */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White for visibility */
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 6px auto; /* Space between lines */
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  background-color: #ffffff;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-color: #e3f2fd; /* Light blue */
+}
+
+.navbar-toggler:hover .navbar-toggler-icon::before,
+.navbar-toggler:hover .navbar-toggler-icon::after {
+  background-color: #e3f2fd;
+}
