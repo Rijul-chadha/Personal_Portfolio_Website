@@ -1,55 +1,58 @@
 /* Footer Styles */
 footer {
-    background-color: #2c3e50; /* Dark color for the footer */
-    color: white;
-    text-align: center;
-    padding: 20px 0; /* Padding for top and bottom */
-    position: relative;
-    width: 100%;
-    margin-top: 40px; /* Add space above the footer */
-  }
-  
-  .footer-content p {
-    margin: 5px 0; /* Small margin for separation */
-    font-size: 1rem;
-  }
-  
+  background-color: #2c3e50; /* Dark color for the footer */
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Padding for top and bottom */
+  position: relative;
+  width: 100%;
+  margin-top: 40px; /* Add space above the footer */
+}
+
+.footer-content p {
+  margin: 5px 0; /* Small margin for separation */
+  font-size: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #ecf0f1; /* Light text for readability */
+  margin: 0;
+}
+
+/* Sticky Footer */
+html, body {
+  height: 100%; /* Make sure the page takes the full height */
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Ensures the main content stretches to fill available space */
+}
+
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    font-size: 0.9rem; /* Slightly smaller text on small screens */
   }
-  
-  .footer p {
-    font-size: 1rem;
-    color: #ecf0f1; /* Light text for readability */
-    margin: 0;
+
+  footer {
+    padding: 15px 0; /* Reduced padding for small screens */
   }
-  
-  /* Sticky Footer (if page content is small) */
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1; /* Ensures that main content takes up available space */
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .footer-content {
-      font-size: 0.9rem; /* Slightly smaller text on small screens */
-    }
-  
-    footer {
-      padding: 15px 0; /* Reduced padding for small screens */
-    }
-  }
-  
+}
