@@ -26,7 +26,7 @@ const projectData = [
     title: "Payroll Management DBMS",
     description: "Designed a payroll management system using Oracle SQL, implementing complex queries, views, and procedures for secure salary processing and reporting.",
     techStack: "Oracle SQL, PHP",
-    link: "https://github.com/Rijul-chadha?tab=repositories",
+    link: "https://github.com/Rijul-chadha/Payroll_Management_DBMS",
   },
  
   {
