@@ -49,8 +49,9 @@ const HomePage = () => {
           <a href={resumeFile} download="Rijul_Chadha_Resume.pdf" className="resume-button">
             Download Resume
           </a>
+          <br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
-      </div><br></br><br></br><br></br><br></br><br></br><br></br>
+      </div>
     </section>
   );
 };
