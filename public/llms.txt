@@ -21,6 +21,7 @@ AI & agents: LLMs, RAG, LangGraph, MCP, LLM-as-a-judge. ML: PyTorch, XGBoost, ML
 
 ## Links
 
+- Website: https://www.rijulchadha.com
 - GitHub: https://github.com/Rijul-chadha
 - LinkedIn: https://www.linkedin.com/in/rijul-chadha-788801255/
 - Email: r1chadha@torontomu.ca

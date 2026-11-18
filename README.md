@@ -1,37 +1,25 @@
-# My Portfolio Website
+# rijulchadha.com
 
-Welcome to the repository for my personal portfolio website! This project showcases my skills, projects, and experience as a software developer.
+Source for my personal site: **https://www.rijulchadha.com**
 
----
+A minimal single-page portfolio covering my work, projects, process and education.
 
-## Overview
+## Stack
 
-This portfolio website serves as an online resume and project showcase. It features sections like:
+- React 18 + Vite
+- Plain CSS (light/dark themes, no UI framework)
+- Vercel hosting and Web Analytics
 
-- **About Me**: Highlighting my background and professional interests.
-- **Skills**: Displaying technical skills with a clean design.
-- **Projects**: Showcasing completed projects with descriptions and links.
-- **Contact**: Providing links to my LinkedIn, GitHub, and other social profiles.
+## Editing content
 
----
+All text, projects, stats and links live in [`src/data.js`](src/data.js). Change that file and push to `main`, and Vercel redeploys automatically.
 
-## Features
+`public/llms.txt` is a plain-text version of the profile for AI tools. Keep it in sync when the content changes.
 
-- **Responsive Design**: Works seamlessly on desktops, tablets, and mobile devices.
-- **Animated Transitions**: Smooth animations using Framer Motion.
-- **Project Showcase**: Each project card includes a description, tech stack, and a link to the live demo or source code.
-- **Custom Theme**: Styled using a custom color palette for a modern and professional look.
+## Run locally
 
----
-
-## Technologies Used
-
-- **Frontend**:
-  - React.js
-  - CSS (custom styles)
-  - Framer Motion for animations
-- **Build Tool**: Vite.js
-- **Hosting**: [Vercel](https://vercel.com/)
-
----
-
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build into dist/
+```
