@@ -1,0 +1,26 @@
+# Rijul Chadha
+
+> AI and backend engineer in Toronto. Builds scalable, distributed backend systems, machine learning pipelines and AI agents that hold up in production. BSc Computer Science (specializing in Artificial Intelligence, co-op) at Toronto Metropolitan University, graduating 2027.
+
+## Work
+
+- Interac (Sep 2026 – present), AI Product Delivery & Development: builds AI agents for the e-Transfer, Real-Time Rail, Fraud & Security and HR teams on Interac's enterprise Azure agent platform, with MCP/REST integrations and governance controls.
+- Ontario Public Service, Ministry of Public & Business Service Delivery (Jan – Aug 2026), AI Engineering: LLM/RAG pipelines routing applications across 31 ministries cut mining permit approvals from 24 months to 2 months; shipped an agentic licence plate approval system to production with 5x throughput and no manual review.
+
+## Projects
+
+- [Campus Lost & Found](https://github.com/Rijul-chadha/campus-lost-and-found): modular monolith with transactional outbox, idempotent Redis workers, Postgres integrity guarantees and explainable matching with an LLM fallback behind a circuit breaker. 0.96 recall@1, 43 tests.
+- Customer Churn Prediction: Spark ETL on Azure Databricks, XGBoost and PyTorch LSTM tracked in MLflow, real-time FastAPI inference on AKS. 91.2% ROC-AUC, 30 days early warning.
+- Survey AI: five-agent LangGraph workflow with MCP tools and an LLM-as-a-judge evaluation pipeline.
+- Data Quality & Observability: schema-drift, freshness and row-count checks across 10+ pipelines with lineage-aware alerting; 85% fewer undetected issues, root-cause time from 3 hours to 20 minutes.
+- [Product Sense](https://github.com/Rijul-chadha/Product-Sense): photo-based skincare product identification with retrieval matching and an ingredient (INCI) parser.
+
+## Skills
+
+AI & agents: LLMs, RAG, LangGraph, MCP, LLM-as-a-judge. ML: PyTorch, XGBoost, MLflow, Spark, Databricks. Backend: FastAPI, PostgreSQL, pgvector, Redis, MongoDB. Infra: Docker, Kubernetes, AKS, Azure, GitHub Actions. Languages: Python, TypeScript, SQL, R.
+
+## Links
+
+- GitHub: https://github.com/Rijul-chadha
+- LinkedIn: https://www.linkedin.com/in/rijul-chadha-788801255/
+- Email: r1chadha@torontomu.ca

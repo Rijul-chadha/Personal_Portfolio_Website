@@ -2,9 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Rijul Chadha · AI & Backend Engineer</title>
+    <meta name="description" content="Rijul Chadha builds scalable backend systems, machine learning and AI agents that hold up in production. Toronto." />
+    <meta name="author" content="Rijul Chadha" />
+    <meta name="theme-color" content="#f2eee5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#101211" media="(prefers-color-scheme: dark)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rijul Chadha · AI & Backend Engineer" />
+    <meta property="og:description" content="Distributed systems, machine learning and AI agents that hold up at scale." />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-readable profile" />
+
+    <!-- Set the theme before first paint so there is no flash of the wrong theme -->
+    <script>
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem('theme'); } catch (e) {}
+        if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" />
   </head>
   <body>
     <div id="root"></div>
